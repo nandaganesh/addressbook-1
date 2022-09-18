@@ -23,6 +23,7 @@ pipeline {
                 script {
                     sshagent(['ssh-key']) {
                     echo "compile the code"
+                    sh "chmod 400 1609222.pem"
                     sh "chmod 700 server-script.sh "
                     sh "scp -o StrictHostKeyChecking=no server-script.sh admin@3.6.126.180:/home/ubuntu"
                     sh "ssh -o StrictHostKeyChecking=no admin@3.6.126.180 'bash ~/server-script.sh'"
