@@ -23,8 +23,8 @@ pipeline {
                 script {
                     sshagent(['ssh-key']) {
                     echo "compile the code"
-                    sh "scp -o StrictHostKeyChecking=no server-script.sh admin@3.6.126.180:/home/ubuntu"
-                    sh "ssh -o StrictHostKeyChecking=no admin@3.6.126.180 'bash ~/server-script.sh'"
+                    sh "scp -o StrictHostKeyChecking=no server-script.sh admin@13.233.199.238:/home/ubuntu"
+                    sh "ssh -o StrictHostKeyChecking=no admin@13.233.199.238 'bash ~/server-script.sh'"
                     sh "mvn package"
                     }
                 }
