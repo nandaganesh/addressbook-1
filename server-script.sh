@@ -11,4 +11,5 @@ else
  echo "repo is not existed and cloning now.."
  git clone  https://github.com/nandaganesh/addressbook-1.git
 fi
+mvn package
  
